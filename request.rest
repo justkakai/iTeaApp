@@ -1,0 +1,11 @@
+GET http://localhost:3001/api/tea
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS2FrYWkiLCJpYXQiOjE2NTUyMTU0MjZ9.oZZAvv04zAP_5Hj2bz94qhqMMxqlW3lAC5QbBPyy4ZM
+
+###
+
+POST http://localhost:3001/login
+Content-Type: application/json
+
+{
+    "username": "Kakai"
+}
