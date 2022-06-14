@@ -1,5 +1,5 @@
 GET http://localhost:3001/api/tea
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRGFpc3kiLCJpYXQiOjE2NTUyMzc1MjJ9.fhgNv8IEgjOika_Lh1dC0WykkdJ7TJuLoeHa0GuG-_k
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS2FrYWkiLCJpYXQiOjE2NTUyMzg3ODh9.JLbIlly4ZzRpyL03wpzilxye9NKgu12wjLvytUgb3j8
 
 ###
 
@@ -7,5 +7,5 @@ POST http://localhost:3001/login
 Content-Type: application/json
 
 {
-    "username": "Daisy"
+    "username": "Kakai"
 }
