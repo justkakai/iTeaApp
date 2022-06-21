@@ -4,6 +4,7 @@ import { teaPreferences } from "../datasets/teaPreferences.js";
 import { generateAccessToken } from '../middlewares/generateAccessToken.js';
 dotenv.config();
 
+// for storing the (valid) refresh tokens
 let refreshTokens = [];
 
 /** 
@@ -64,5 +65,10 @@ export const createNewToken = (req, res) => {
         const accessToken = generateAccessToken({ name: user.name }, process.env.ACCESS_SECRET, '15s') // so that we're only passing down the raw user object, without all the extra info such as the issued at date (which we don't need!)
         res.json({ accessToken });
     })
+}
+
+export const deleteRefreshToken = (req, res) => {
+    refreshTokens = refreshTokens.filter(token => token !== req.body.token);
+    res.sendStatus(204); // we have successfully deleted the token
 }
 

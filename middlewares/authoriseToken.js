@@ -15,7 +15,7 @@ export const authoriseToken = (req, res, next) => {
 
     // here we know we have a valid token, so we need to verify it
     jwt.verify(token, process.env.ACCESS_SECRET, (err, user) => {
-        if (err) return res.sendStatus(403); // we see that you have a token, but this token is no longer valid, meaning you don't have access!
+        if (err) return res.sendStatus(403); // i.e. we see that you have a token, but this token is no longer valid, meaning you don't have access!
         req.user = user;
         next();
     })

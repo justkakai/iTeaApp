@@ -12,8 +12,6 @@ app.get('/api/tea', authoriseToken, getPreferences);
 
 app.use(authoriseToken);
 
-// app.post('/login', loginUser);
-
 const PORT = process.env.SERVER_PORT;
 
 app.listen(
