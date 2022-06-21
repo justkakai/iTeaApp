@@ -1,6 +1,6 @@
 import express from "express";
 import dotenv from 'dotenv';
-import { getPreferences, loginUser } from "./controllers/controllers.js";
+import { getPreferences } from "./controllers/controllers.js";
 import { authoriseToken } from "./middlewares/authoriseToken.js";
 dotenv.config();
 
@@ -10,9 +10,9 @@ app.use(express.json());
 
 app.get('/api/tea', authoriseToken, getPreferences);
 
-app.post('/login', loginUser);
-
 app.use(authoriseToken);
+
+// app.post('/login', loginUser);
 
 const PORT = process.env.SERVER_PORT;
 
@@ -20,6 +20,6 @@ app.listen(
     PORT,
     () => {
         console.log(
-            `Application is connected and listening to port ${PORT}`
+            `Server is connected and listening to port ${PORT}`
         );
     })

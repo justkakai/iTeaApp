@@ -1,11 +1,20 @@
 GET http://localhost:3001/api/tea
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS2FrYWkiLCJpYXQiOjE2NTUyMzg3ODh9.JLbIlly4ZzRpyL03wpzilxye9NKgu12wjLvytUgb3j8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSm8gQW5uIiwiaWF0IjoxNjU1ODQ1MjYzLCJleHAiOjE2NTU4NDUyNzh9.Jko-rfv3ywg2SHrfPopB7glmCFkJpgXPRI3NaO9-FbI
 
 ###
 
-POST http://localhost:3001/login
+POST http://localhost:4001/token
 Content-Type: application/json
 
 {
-    "username": "Kakai"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSm8gQW5uIiwiaWF0IjoxNjU1ODQ1MjQxfQ.IPA7ZlhvFmoWPgdSxo-kOV0inEM_xEWGqTWeDeCBItM"
+}
+
+###
+
+POST http://localhost:4001/login
+Content-Type: application/json
+
+{
+    "username": "Jo Ann"
 }
